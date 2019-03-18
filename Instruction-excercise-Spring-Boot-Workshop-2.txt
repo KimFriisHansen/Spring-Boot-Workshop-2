@@ -1,0 +1,27 @@
+Insert the following in project and remove redundant:
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+//@RestController is a convenience annotation that is itself annotated with @Controller and @ResponseBody
+@RestController
+
+Add the following class
+ // @RequestMapping annotation is used for mapping web requests onto specific handler classes
+    @RequestMapping("/")
+    String basicURL() {
+        return "Bestseller";
+    }
+
+Point your browser to: http://localhost:8080/
+Look at the result
+
+Add antother Class
+ String basicURL() {
+        ...
+    }
+
+And continue making your own API
